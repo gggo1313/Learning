@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+a {
+    color:black;
+    text-decoration: none;
+}
+h1 {
+    font-size: 60px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin: 0;
+    padding: 20px;
+}
+ol {
+    border-right: 1px solid gray;
+    width: 100px;
+    margin: 0;
+    padding: 32px;
+}
+#grid ol {
+    padding-left: 33px;
+} 
+/* id 값은 중복해서 사용하면 안 됨 */
+/* id 선택자가 가장 구체적이기 때문에 우선순위가 가장 높음 */
+/* 포함하는 범위: 태그 선택자 > 클래스 > id선택자 */
+#grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+#article {
+    padding-left: 25px;
+}
+@media(max-width: 800px) {
+    #grid {
+        display: block;
+    }
+    ol {
+        border-right: none;
+    }
+    h1 {
+        border-bottom: none;
+    }
+}

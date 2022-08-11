@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 form Validation</title>
+</head>
+<body>
+    <!-- required: 필수 입력값
+    pattern: 제한사항을 정규표현식으로 입력 -->
+    <form action="register.php">
+        <input type="text" name="id" placeholder="Input ID" 
+        required pattern="[a-zA-Z].+[0-9]"> 
+        <!-- 정규표현식 뒤의 .은 이후의 값은 아무거나 상관없다는 뜻
+        정규표현식 뒤의 +는 이후의 값이 반드시 있어야 한다는 뜻정규표현식 뒤의 .은 이후의 값은 아무거나 상관없다는 뜻 -->
+
+        <input type="email" name="email" placeholder="Input email">
+        <input type="submit">
+    </form>
+</body>
+</html>
